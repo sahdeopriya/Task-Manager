@@ -1,165 +1,153 @@
 
-# Task Management Web Application using MERN Stack
+# Task Manager
 
+Task Manager is a robust and feature-rich task management application built using the MERN stack (MongoDB, Express.js, React, and Node.js). This application is designed to streamline task organization and improve productivity by allowing users to create, view, update, and delete tasks seamlessly.
 
+The project offers a clean, responsive, and intuitive user interface powered by React and styled with Tailwind CSS. On the backend, Node.js and Express.js ensure secure and efficient API handling, while MongoDB provides a scalable and flexible database solution.
 
-This is a Task Management Web Application built using the MERN stack (MongoDB, Express, React, Node.js). The application helps users manage their daily tasks by allowing them to create, view, update, and delete tasks efficiently. It provides a clean and responsive interface for both users and developers, along with features like authentication, data validation, and token-based security. The project utilizes Redux for state management and Tailwind CSS for responsive and modern styling. This application is ideal for anyone looking to manage their tasks effectively.
+Key highlights include secure user authentication, real-time notifications, and a dynamic dashboard, making this application ideal for both users seeking an effective task management solution and developers looking to explore modern web development practices.
 
+## ✨Core Features
 
-# Features
-
-## User-Side Features
-Signup – Users can sign up by providing their name, email, and password.
-
-Login – Users can log in to their account using their email and password.
-
-Logout – Users can log out from the application.
-Add Tasks – Users can create new tasks by entering details like title, description, and due date.
-
-View Tasks – Users can view a list of all their tasks.
-
-Update Tasks – Users can modify their existing tasks.
-
-Delete Tasks – Users can delete tasks they no longer need.
-
-## Developer-Side Feature
-
-Toasts for Success/Failure – Dynamic toast messages indicating success or failure of actions.
-
-Form Validations – Frontend and backend validations for user input.
-Responsive Navbar – A navigation bar that adapts to different screen sizes.
-
-Token-Based Authentication – Secure login and registration using JWT.
-
-404 Page for Wrong URLs – Displays a 404 page when a user accesses an invalid route.
-
-Global User State – User authentication status managed globally using Redux.
-
-Custom Loaders – Loaders indicating data fetching processes.
-
-Tailwind CSS – Utility-first CSS framework for styling.
-
-Dynamic Document Titles – Titles change dynamically based on the page route.
-
-Routes Protection – Prevents access to certain routes without authentication.
-
-Middleware for Backend Authentication – Ensures that only authorized users can access specific backend routes.
-
-Various HTTP Status Codes – Standardized response status codes for API requests.
+### For Users
+User Authentication: Register, login, and logout securely
+Task Management: Add, view, update, and delete tasks
+Seamless Navigation with a dynamic dashboard
+### For Developers
+Toast notifications for feedback (success/error)
+Full-stack form validation (frontend & backend)
+Token-based Authentication (JWT)
+Global state management with Redux
+Dynamic page titles and redirects
+Reusable components (e.g., layout, loaders)
+Custom hooks (e.g., useFetch) for streamlined coding
+Middleware for backend request validation
+Tailwind CSS for a lightweight, custom-styled UI
 
 
 ## Screenshots
 
-![App Screenshot](https://res.cloudinary.com/dw1leavm8/image/upload/v1735940626/my1_hubhpu.png)
+![App Screenshot](https://res.cloudinary.com/dgjihp0pq/image/upload/v1735979124/Screenshot_2025-01-04_134557_ersxso.png)
 
-![App Screenshot](https://res.cloudinary.com/dw1leavm8/image/upload/v1735940626/my2_krt6xw.png)
+![App Screenshot](https://res.cloudinary.com/dgjihp0pq/image/upload/v1735979118/Screenshot_2025-01-04_134610_koug0z.png)
 
-![App Screenshot](https://res.cloudinary.com/dw1leavm8/image/upload/v1735940625/my3_ksuotr.png)
+![App Screenshot](https://res.cloudinary.com/dgjihp0pq/image/upload/v1735979117/Screenshot_2025-01-04_134627_yqi9b6.png)
 
-![App Screenshot](https://res.cloudinary.com/dw1leavm8/image/upload/v1735940625/my4_bswjkf.png)
+![App Screenshot](https://res.cloudinary.com/dgjihp0pq/image/upload/v1735979127/Screenshot_2025-01-04_134658_erqobv.png)
 
-![App Screenshot](https://res.cloudinary.com/dw1leavm8/image/upload/v1735940625/my5_yajycu.png)
+![App Screenshot](https://res.cloudinary.com/dgjihp0pq/image/upload/v1735979120/Screenshot_2025-01-04_134713_bqxyoc.png)
 
-![App Screenshot](https://res.cloudinary.com/dw1leavm8/image/upload/v1735940625/my6_cd6ej0.png)
+![App Screenshot](https://res.cloudinary.com/dgjihp0pq/image/upload/v1735979128/Screenshot_2025-01-04_134738_gzepan.png)
 
-![App Screenshot](https://res.cloudinary.com/dw1leavm8/image/upload/v1735940873/my7_xohu79.png)
+![App Screenshot](https://res.cloudinary.com/dgjihp0pq/image/upload/v1735979121/Screenshot_2025-01-04_134800_vj1qry.png)
 
-## Tools and Technolgies
 
-### Frontend:
+## 🛠️ Tech Stack
 
-HTML
+Frontend: React, Redux, Tailwind CSS
+Backend: Node.js, Express.js
+Database: MongoDB
+## 📦 Key Dependencies
 
-CSS (Tailwind CSS)
+axios, redux-thunk - For API interactions and asynchronous actions
+jsonwebtoken, bcrypt - For authentication and password security
+mongoose - For database schema and operations
+react-toastify - For interactive user notifications
+## 🔧 Development Tools
 
-JavaScript (React)
+nodemon - Automatically restarts the server on file changes
+concurrently - Runs multiple processes simultaneously
+## ⚙️ System Setup
 
-Redux
+1. Ensure you have Node.js installed on your machine.
+2. Set up a MongoDB database (local or cloud-based).
+3. Install a code editor like Visual Studio Code.
+## 🚀 Getting Started
 
-### Backend:
+1. Clone the Repository
+ 
+```bash
+  git clone https://github.com/aayush301/MERN-task-manager.git  
+  cd MERN-task-manager  
+```
+2. Install Dependencies
+```bash
+  npm run install-all   
+```
+3. Configure Environment Variables
+Create a .env file in the backend directory and populate it using the .env.example template.
 
-Node.js
+4. Run the Application for Backend
+```bash
+  npm run dev    
+```
 
-Express.js
+5. Run the Application for Frontend
+```bash
+  npm start
+```
 
+Visit http://localhost:3000 in your browser.
+## 📡 API Documentation
+
+### Authentication
+POST /api/auth/signup - Register a new user
+POST /api/auth/login - Log in with existing credentials
+
+### Task Operations
+GET /api/tasks - Fetch all tasks
+GET /api/tasks/:taskId - Fetch details of a specific task
+POST /api/tasks - Add a new task
+PUT /api/tasks/:taskId - Update an existing task
+DELETE /api/tasks/:taskId - Remove a task
+
+### Profile
+GET /api/profile - Retrieve user details
+## 🌐 Frontend Routes
+
+/ - Dashboard (for authenticated users) or landing page (for guests)
+
+/signup - User registration
+
+/login - User login
+
+/tasks/add - Add a new task
+
+/tasks/:taskId - Edit an existing task
+## 📜 Scripts
+
+### Root-Level Scripts
+npm run dev - Launch backend and frontend concurrently
+npm run dev-server - Start backend only
+npm run dev-client - Start frontend only
+npm run install-all - Install all project dependencies
+
+### Frontend-Specific Scripts
+npm start - Launch the frontend in development mode
+npm run build - Compile the frontend for production
+npm test - Run tests in interactive watch mode
+
+### Backend-Specific Scripts
+npm run dev - Start the backend server with live reload (nodemon)
+npm start - Start the backend without live reload
+## 🔗 Helpful Links
+
+### Documentation
+React.js
 MongoDB
+npm
 
-JWT Authentication
+### Tutorials
+Express.js Guide
+React Crash Course
+Redux Basics
 
-### Other Tools:
+### Tools and Cheatsheets
+Node.js Download
+VS Code
+Git Cheat Sheet
+## 📬 Reach Out
 
-Git & GitHub for version control
-## Reqirements
+For questions or feedback, contact:
 
-Node.js and npm installed on your machine.
-
-MongoDB running locally or use a cloud-based MongoDB service.
-
-A code editor like Visual Studio Code for development.
-
-## Installation
-
-### 1. Clone the Repository
-
-```bash
-  git clone https://github.com/your-username/project-name.git
-
-```
-
-### 2. Install Dependencies
-
-```bash
-  npm run install-all
-
-```
-
-### 3.  Set Up Environment Variables
-
-Create a .env file in the backend folder.
-
-Replace the example values with your own credentials.
-
-### 4. Command For Run Frontend
-
-```bash
-npm start
-
-```
-
-### 5. Command for Run Backend
-
-```bash
-npm run dev
-
-```
-
-    
-## Backend API
-
-Here are the available routes for the backend:
-
-. POST /api/auth/signup – Register a new user.
-
-. POST /api/auth/login – Login to the system.
-
-. GET /api/tasks – Get all tasks.
-
-. POST /api/tasks – Create a new task.
-
-. PUT /api/tasks/:taskId – Update an existing task.
-
-. DELETE /api/tasks/:taskId – Delete a task.
-## Links
-
-### Official Docs:
-
-React Docs: https://reactjs.org/docs/
-
-Node.js Docs: https://nodejs.org/en/docs/
-
-MongoDB Docs: https://docs.mongodb.com/
-## Support
-
-Email: sahugagan302@gmail.com
-
-LinkedIn: https://www.linkedin.com/in/gagan-sahu-b72405241?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+Email: priyasahdeo706@gmail.com
